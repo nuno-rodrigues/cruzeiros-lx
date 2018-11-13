@@ -1,0 +1,9 @@
+<nav>
+  <button mat-button (click)="checkStatus('prev')" [disabled]="!isDisabledPrev">
+    <mat-icon>navigate_before</mat-icon>Previous Day
+  </button>
+    <!-- <input type="text" /> -->
+  <button mat-button (click)="checkStatus('next')" [disabled]="!isDisabledNext">
+      Next Day<mat-icon>navigate_next</mat-icon>
+  </button>
+</nav>

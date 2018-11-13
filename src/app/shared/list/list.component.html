@@ -1,0 +1,17 @@
+<p>Date: <strong>{{currentDate}}</strong></p>
+<p>Number Cruises: <strong>{{cruisesArray.length}}</strong></p>
+<p>Total Passengers: <strong>{{totalPassengers}}</strong></p>
+
+<ng-container *ngIf="checkCruises() else noCruises">
+  <ul>
+    <li *ngFor="let item of cruisesArray">
+      <app-item [item]=item></app-item>
+    </li>
+  </ul>
+</ng-container>
+
+<ng-template #noCruises>
+  <div class="no-cruises">
+    <h1 class="mat-display-1">No Cruises in this day</h1>
+  </div>
+</ng-template>

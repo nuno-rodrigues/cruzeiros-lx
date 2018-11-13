@@ -1,0 +1,47 @@
+
+.card-cruise {
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+  height: 320px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.mat-card-subtitle {
+  color: white;
+}
+
+.block-info {
+  background-color: rgba(0, 0, 0, .7);
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.time.arrival {
+  color: deepskyblue;
+}
+
+.time.departure {
+  color: skyblue;
+}
+
+.time .mat-icon.material-icons {
+  margin-right: 5px;
+}
+
+.time.arrival .mat-icon.material-icons {
+  transform: rotate(-45deg);
+}
+
+.time.departure .mat-icon.material-icons {
+  transform: rotate(45deg);
+}

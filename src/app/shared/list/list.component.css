@@ -1,0 +1,34 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 360px;
+}
+
+ul li {
+  /* padding: 10px; */
+  background-color: rgb(228, 228, 228);
+}
+
+ul li:nth-child(odd) {
+  background-color: rgb(208, 208, 208);
+}
+
+p {
+  font: 400 14px Roboto,"Helvetica Neue",sans-serif;
+}
+
+.no-cruises {
+  width: 360px;
+  background-color: #588BAE;
+  display: flex;
+  width: 360px;
+  height: 320px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+h1 {
+  margin: 0;
+}

@@ -1,0 +1,18 @@
+nav {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 360px;
+}
+
+button {
+  background-color: #111E6C;
+  width: 150px;
+  color: white;
+}
+
+button:disabled,
+button[disabled],
+.mat-button[disabled][disabled] {
+  color: #1034A6;
+}

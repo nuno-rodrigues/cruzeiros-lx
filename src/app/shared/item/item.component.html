@@ -1,0 +1,12 @@
+<mat-card class="card-cruise" [ngStyle]="{'background-image': 'url(' + imageSrc(item.CapMaxPax) + ')'}">
+  <div class="block-info">
+    <mat-card-title>Nome: {{ item.Navio }}</mat-card-title>
+    <mat-card-subtitle>Capacidade: {{ removeCharacter(item.CapMaxPax) }}</mat-card-subtitle>
+    <div class="time arrival">
+      <mat-icon>arrow_downward</mat-icon> {{ item.Chegada }}
+    </div>
+    <div class="time departure">
+      <mat-icon>arrow_upward</mat-icon> {{ item.Partida }}
+    </div>
+  </div>
+</mat-card>

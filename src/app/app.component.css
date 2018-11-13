@@ -1,0 +1,21 @@
+/*
+get more blues
+https://graf1x.com/shades-of-blue-color-palette/
+*/
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #111E6C;
+}
+
+p {
+  font: 400 14px Roboto,"Helvetica Neue",sans-serif;
+}
+
+.text-small {
+  font-style: italic;
+  color: #111E6C;
+  margin: 0;
+}
