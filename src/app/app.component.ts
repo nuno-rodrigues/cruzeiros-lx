@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { GetCruisesService } from './shared/services/get-cruises.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from '../../node_modules/rxjs';
 
 @Component({
   selector: 'app-root',
@@ -19,11 +19,11 @@ export class AppComponent {
     // console.log('countChange:-----');
   }
 
-  constructor(cruises: GetCruisesService) {
+  constructor() {
     // console.log(this.newDate);
     // console.log(cruises);
     // console.log(this.dataArray);
-    this.dataArray = cruises.dataArray;
+    // this.dataArray = cruises.dataArray;
   }
 
 }

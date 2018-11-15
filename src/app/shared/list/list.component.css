@@ -19,11 +19,11 @@ p {
 }
 
 .no-cruises {
-  width: 360px;
   background-color: #588BAE;
   display: flex;
-  width: 360px;
+  max-width: 340px;
   height: 320px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   border-radius: 4px;

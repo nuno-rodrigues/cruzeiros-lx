@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { GetCruisesService } from '../services/get-cruises.service';
 import { DatePipe } from '@angular/common';
+import { Subscription } from '../../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-list',
@@ -8,7 +10,7 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe]
 })
 
-export class ListComponent implements OnInit {
+export class ListComponent implements OnInit, OnDestroy {
 
   private _dateSet: any;
   get dateSet(): any {
@@ -33,9 +35,9 @@ export class ListComponent implements OnInit {
   dateNow: number = Date.now();
   currentDate: any;
   totalPassengers: number;
+  uns: Subscription;
 
-  constructor(private datePipe: DatePipe) {
-  }
+  constructor(private datePipe: DatePipe, private cruises: GetCruisesService) {}
 
   ngOnInit() {
     this.totalPassengers = 0;
@@ -43,7 +45,19 @@ export class ListComponent implements OnInit {
     this.checkCruises();
   }
 
+  ngOnDestroy() {
+    this.uns.unsubscribe();
+  }
+
   addCruises() {
+    this.uns = this.cruises.getCruises()
+      .subscribe(cruises => {
+        this.dataInfo = cruises;
+        this.addCruisesToArray();
+      });
+  }
+
+  addCruisesToArray() {
     this.dataInfo.forEach(element => {
       this.currentDate = this.datePipe.transform(this.dateNow, 'dd-MM-yyyy'); // whatever format you need
       if (this.dateSet) {

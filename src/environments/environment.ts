@@ -2,8 +2,13 @@
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// links with info:
+// http://www.portodelisboa.pt/portal/page/portal/PORTAL_PORTO_LISBOA/CRUZEIROS/PREVISAO_NAVIOS_CRUZEIRO
+// http://crew-center.com
+
 export const environment = {
-  production: false
+  production: false,
+  api: 'http://localhost:88/angular/backoffice/data.json'
 };
 
 /*

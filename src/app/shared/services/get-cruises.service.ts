@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
-import * as data from '../../../assets/data/data.json';
-
-// links with info:
-// http://www.portodelisboa.pt/portal/page/portal/PORTAL_PORTO_LISBOA/CRUZEIROS/PREVISAO_NAVIOS_CRUZEIRO
-// http://crew-center.com
+import { Observable } from '../../../../node_modules/rxjs';
+// import * as data from '../../../assets/data/data.json';
+import { HttpClient } from '../../../../node_modules/@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetCruisesService {
 
-  dataArray: any = data;
+  // dataArray: any = data;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     // console.log(this.dataArray.data);
+  }
+
+  getCruises(): Observable<Array<any>> {
+    return this.http.get<Array<any>>(`${environment.api}`);
   }
 }

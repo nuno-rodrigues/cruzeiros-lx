@@ -7,6 +7,6 @@
     Info update on: {{ updateJson }}
   </p>
   <app-navigation (newDate)="countChange($event)"></app-navigation>
-  <app-list [dataInfo]="dataArray.data" [dateSet]="newDate"></app-list>
+  <app-list [dataInfo]="dataArray" [dateSet]="newDate"></app-list>
   <app-footer></app-footer>
 </div>
