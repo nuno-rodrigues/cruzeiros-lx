@@ -10,7 +10,7 @@ import { Subscription } from '../../node_modules/rxjs';
 export class AppComponent {
   title = 'Cruzeiros Lx';
   newDate: any;
-  updateJson: any = '07-11-2018';
+  updateJson: any = '05-12-2018';
   dataArray: any;
 
   countChange(event) {

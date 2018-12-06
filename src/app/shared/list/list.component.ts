@@ -33,9 +33,10 @@ export class ListComponent implements OnInit, OnDestroy {
 
   cruisesArray: any = [];
   dateNow: number = Date.now();
-  currentDate: any;
+  currentDate: any = 'dd-mm-yyy';
   totalPassengers: number;
   uns: Subscription;
+  isHidden: boolean;
 
   constructor(private datePipe: DatePipe, private cruises: GetCruisesService) {}
 
@@ -43,6 +44,7 @@ export class ListComponent implements OnInit, OnDestroy {
     this.totalPassengers = 0;
     this.addCruises();
     this.checkCruises();
+    this.isHidden = true;
   }
 
   ngOnDestroy() {
@@ -50,10 +52,12 @@ export class ListComponent implements OnInit, OnDestroy {
   }
 
   addCruises() {
+    this.isHidden = true;
     this.uns = this.cruises.getCruises()
       .subscribe(cruises => {
         this.dataInfo = cruises;
         this.addCruisesToArray();
+        this.isHidden = false;
       });
   }
 
@@ -98,7 +102,6 @@ export class ListComponent implements OnInit, OnDestroy {
         // console.log('----');
         return parseInt(obj2.CapMaxPax, 10) - parseInt(obj1.CapMaxPax, 10);
       });
-
       // console.log(this.cruisesArray);
     });
   }

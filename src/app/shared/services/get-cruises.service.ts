@@ -15,7 +15,18 @@ export class GetCruisesService {
     // console.log(this.dataArray.data);
   }
 
-  getCruises(): Observable<Array<any>> {
-    return this.http.get<Array<any>>(`${environment.api}`);
+  // getCruises(): Observable<Array<any>> {
+  //   return this.http.get<Array<any>>(`${environment.api}`);
+  // }
+
+  private _url = environment.api;
+
+  getCruises() {
+    // return this.http.get<Array<any>>(`${environment.api}`);
+    return this.http.get(this._url);
+  }
+
+  getDetail(id: any) {
+    return this.http.get<Array<any>>(`${environment.api}?id=${id}`);
   }
 }

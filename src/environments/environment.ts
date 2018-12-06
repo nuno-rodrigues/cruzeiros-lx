@@ -8,7 +8,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:88/angular/backoffice/data.json'
+  api: '../../../assets/data/data.json'
 };
 
 /*

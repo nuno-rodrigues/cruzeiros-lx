@@ -27,7 +27,7 @@ export class NavigationComponent implements OnInit {
   }
 
   checkStatus(value: any) {
-    console.log(value);
+    // console.log(value);
     // add and remove one day
     const day = (1000 * 60 * 60 * 24);
     if (value === 'next') {

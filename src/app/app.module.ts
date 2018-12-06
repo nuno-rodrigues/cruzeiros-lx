@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { GetCruisesService } from './shared/services/get-cruises.service';
 import { FooterComponent } from './shared/footer/footer.component';
+import { LoadingComponent } from './shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     ListComponent,
     ItemComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
